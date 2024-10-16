@@ -1,0 +1,15 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @product %>
+
+    <%= link_to "Editar", edit_product_path(@product), class: "mt-2 rounded-lg py-3 px-5 inline-block font-medium bg-green-300 hover:bg-green-400 text-white transition-colors" %>
+    <%= link_to "Regresar", products_path, class: "ml-2 rounded-lg py-3 px-5 inline-block font-medium bg-yellow-300 hover:bg-yellow-400 text-white transition-colors" %>
+    <div class="inline-block ml-2">
+      <%= button_to "Eliminar", @product, method: :delete, class: "mt-2 rounded-lg py-3 px-5 test-white bg-red-300 hover:bg-red-400 font-medium text-white transition-colors" %>
+    </div>
+  </div>
+</div>
